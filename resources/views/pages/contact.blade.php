@@ -4,12 +4,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <h1>Contact</h1>
-
-            <div>
-                <p>About me and this site</p>
-            </div>
-
             {!! Form::open(['url' => 'contact/submit']) !!}
+            <div>
+                <p>This is the contact form of my site. You can send me a message for business inquiries or questions</p>
+            </div>
 
             <div class="form-group">
                 {{Form::label('name', 'Name')}}
