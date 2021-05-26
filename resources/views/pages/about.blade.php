@@ -6,7 +6,7 @@
             <h1>Contact</h1>
 
             <div>
-                <p>About me and this beautiful site</p>
+                <p>About me and this beautiful site. Feel free to fill in the contact form if you have a question</p>
             </div>
 
             {!! Form::open(['url' => 'contact/submit']) !!}
