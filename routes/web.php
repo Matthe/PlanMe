@@ -21,4 +21,5 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index']);
 Route::get('/session', [SessionPlanController::class, 'index']);
+Route::get('/about', [HomeController::class, 'about']);
 
