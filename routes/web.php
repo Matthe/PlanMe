@@ -27,4 +27,5 @@ Route::get('/session', [SessionPlanController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
 
 Route::get('/contact', [ContactController::class, 'index']);
+Route::post('/contact/submit', [ContactController::class, 'submit']);
 
