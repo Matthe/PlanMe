@@ -3,9 +3,9 @@
         <input type="text" v-model='item.name' />
         <font-awesome-icon
             icon="plus-square"
+            @click="addItem()"
             :class="[ item.name ? 'active' : 'inactive', 'plus' ]"
         />
-        <h2>Text is: {{ item.name }}</h2>
     </div>
 </template>
 
@@ -13,10 +13,28 @@
 export default {
     data: function (){
         return{
-            message: '',
             item: {
                 name: ''
             }
+        }
+    },
+    methods: {
+        addItem(){
+            if(this.item.name == ''){
+                return;
+            }
+
+            axios.post('api/item/store', {
+                item: this.item
+            })
+            .then( response => {
+                if(response.status == 201){
+                    this.item.name = "";
+                }
+            })
+            .catch(error => {
+                console.log(error);
+            })
         }
     }
 }

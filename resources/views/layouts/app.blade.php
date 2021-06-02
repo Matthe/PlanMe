@@ -8,7 +8,6 @@
         @include('partials.navbar')
 
         <div class="container">
-
             <main class="py-4">
                 @yield('content')
             </main>
@@ -18,6 +17,7 @@
             @include('partials.footer')
         </div>
     </div>
+
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

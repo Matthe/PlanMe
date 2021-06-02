@@ -21,8 +21,6 @@
 
             <p class="">poah ik plan hier een sessie</p>
 
-            <test></test>
-
         </div>
     </div>
 
