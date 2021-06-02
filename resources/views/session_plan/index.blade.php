@@ -19,7 +19,9 @@
 
         <div class="col-md-8">
 
-            <p>poah ik plan hier een sessie</p>
+            <p class="">poah ik plan hier een sessie</p>
+
+            <test></test>
 
         </div>
     </div>

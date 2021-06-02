@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" xmlns="">
 <head>
     @include('partials.head')
 </head>
@@ -8,6 +8,7 @@
         @include('partials.navbar')
 
         <div class="container">
+
             <main class="py-4">
                 @yield('content')
             </main>
@@ -17,5 +18,6 @@
             @include('partials.footer')
         </div>
     </div>
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
