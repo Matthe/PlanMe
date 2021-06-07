@@ -15,7 +15,7 @@ class TodoController extends Controller
      */
     public function index()
     {
-        return Item::orderBy('created_at', 'DESC')->get();
+        return TodoItem::orderBy('created_at', 'desc')->get();
     }
 
     /**
@@ -74,7 +74,7 @@ class TodoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $existingItem = Item::find($id);
+        $existingItem = TodoItem::find($id);
 
         if($existingItem){
             $existingItem->completed = $request->item['completed'] ? true : false;
@@ -95,7 +95,7 @@ class TodoController extends Controller
      */
     public function destroy($id)
     {
-        $existingItem = Item::find($id);
+        $existingItem = TodoItem::find($id);
 
         if($existingItem){
             $existingItem->delete();

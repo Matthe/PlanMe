@@ -6,6 +6,7 @@ use App\Http\Controllers\SessionPlanController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\TodoController;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,12 +22,15 @@ use App\Http\Controllers\TodoController;
 
 Auth::routes();
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/home', [HomeController::class, 'index']);
 Route::get('/session', [SessionPlanController::class, 'index']);
 
-Route::get('/todo', [TodoController::class, 'index']);
-Route::prefix('/todo')->group(function (){
+Route::get('/', [PageController::class, 'getHome']);
+Route::get('/about', [PageController::class, 'getAbout']);
+Route::get('/contact', [PageController::class, 'getContact']);
+Route::get('/todo', [PageController::class, 'getTodo']);
+
+Route::get('/todo/index', [TodoController::class, 'index']);
+Route::prefix('/todo/index')->group(function (){
     Route::post('/store', [TodoController::class, 'store']);
     Route::put('/{id}', [TodoController::class, 'update']);
     Route::delete('/{id}', [TodoController::class, 'destroy']);
